@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h2>Admin Dashboard</h2>
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <!-- Teacher Management -->
+        <div class="management-section">
+            <h3>Manage Teachers</h3>
+            <form id="add-teacher-form">
+                <input type="text" id="teacher-name" placeholder="Name" required>
+                <input type="text" id="teacher-department" placeholder="Department" required>
+                <input type="text" id="teacher-subject" placeholder="Subject" required>
+                <button type="submit">Add Teacher</button>
+            </form>
+            <div id="teacher-list" class="item-list"></div>
+        </div>
+
+        <!-- Student Approval -->
+        <div class="management-section">
+            <h3>Approve Student Registrations</h3>
+            <div id="student-approval-list" class="item-list"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

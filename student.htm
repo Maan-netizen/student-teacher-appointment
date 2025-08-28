@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h2 id="student-welcome">Welcome, Student!</h2>
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <!-- Search and Book -->
+        <div class="management-section">
+            <h3>Find a Teacher & Book Appointment</h3>
+            <input type="text" id="search-teacher" placeholder="Search by name, department, or subject...">
+            <div id="teacher-search-results" class="item-list"></div>
+        </div>
+
+        <!-- My Appointments -->
+        <div class="management-section">
+            <h3>My Appointments</h3>
+            <div id="my-appointments" class="item-list"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>

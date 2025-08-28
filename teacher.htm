@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h2 id="teacher-welcome">Welcome, Teacher!</h2>
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <!-- Schedule Management -->
+        <div class="management-section">
+            <h3>My Schedule</h3>
+            <form id="schedule-form">
+                <input type="date" id="schedule-date" required>
+                <input type="time" id="schedule-time" required>
+                <button type="submit">Add Availability</button>
+            </form>
+            <div id="schedule-list" class="item-list"></div>
+        </div>
+
+        <!-- Appointment Management -->
+        <div class="management-section">
+            <h3>Appointment Requests</h3>
+            <div id="appointment-requests" class="item-list"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="teacher.js"></script>
+</body>
+</html>
